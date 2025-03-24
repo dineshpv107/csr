@@ -14,30 +14,9 @@ const AppLayout = () => {
   }, [selectedOption, navigate]);
 
   useEffect(() => {
-    let urlString = "";
-
-        if (window.__TAURI__) {
-            // For Tauri app, get the current window label or pathname
-            urlString = window.location.pathname; 
-        } else {
-            // For Web app
-            urlString = window.location.href;
-            urlString = urlString.replace(/([^:]\/)\/+/g, "$1");
-        }
-
-        if (urlString) {
-            const url = new URL(window.location.origin + urlString);
-            const jobId = url.searchParams.get("jobId") || url.searchParams.get("jobid");
-            const urlParamToken = url.searchParams.get("token");
-
-            if (!jobId && !urlParamToken) {
-                navigate("/UnAuthorizedUser");
-            } else {
-                navigate(`/csrView?jobId=${jobId}&token=${urlParamToken}`);
-            }
-        } else {
-            navigate("/UnAuthorizedUser");
-        }
+    if (window.location.pathname === '/') {
+      navigate("/csrView?jobId=1003csr133142024043332&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYW5kZWVwX2t1bWFyQGV4ZGlvbi5jb20iLCJqdGkiOiJiZjJkOTE1OC1kMTgzLTQ2ZDYtODIwMS02MGFlNTViZjExNjAiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzYW5kZWVwX2t1bWFyQGV4ZGlvbi5jb20iLCJleHAiOjIwNDQwNjkxMjMsImlzcyI6ImNzclZhbGlkYXRlSXNzdWVyIiwiYXVkIjoiY3NyVmFsaWRhdGVBdWRpZW5jZSJ9.fBOIIZq8HMSoSScTRjuYTXREqYpl8R39LDFxgmSG1xg");
+    }
   }, []);
 
   return (

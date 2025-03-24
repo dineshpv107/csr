@@ -95,7 +95,6 @@ function App(props) {
     const url = new URL(urlString);
     const jobId = url.searchParams.get("jobId") || url.searchParams.get("jobid");
     const urlParamToken = url.searchParams.get("token");
-    
 
     if (!jobId) return;
 
