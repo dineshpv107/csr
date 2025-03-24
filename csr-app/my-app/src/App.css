@@ -1,0 +1,706 @@
+html,
+body,
+#root {
+  overflow: hidden;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+}
+
+/* .css-1a94lxe-MuiTabs-root {
+  overflow: hidden !important;
+  max-height: 35px !important;
+  display: flex !important;
+}
+
+.css-1a94lxe-MuiTabs-root .MuiTab-root {
+  margin: -7px 0px 0px -5px !important;
+  color: black !important;
+  font-weight: 700 !important;
+  font-family: Tahoma, sans-serif !important;
+}
+
+.css-11yukd5-MuiTabs-indicator {
+  position: absolute !important;
+  height: 2px !important;
+  bottom: 5px !important;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #9c27b0 !important;
+}
+
+.kSQMEB {
+  position: relative;
+  width: 100%;
+  top: -5px;
+  border-radius: inherit;
+  overflow-x: auto;
+  overflow-y: auto;
+  min-height: 0;
+  max-height: 100vh;
+} */
+
+.luckysheet-wa-editor {
+  height: 30px;
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  background: #fafafc;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  border-bottom: 1px solid #d4d4d4;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.luckysheet-scrollbar-y {
+  scroll-behavior: initial !important;
+}
+
+.inner-137 {
+    padding: 0px 7px 7px;
+}
+
+.ms-List-page {
+  height: auto !important; 
+}
+
+.ms-DetailsList  {
+  overflow: scroll;
+  overflow-y: hidden;
+}
+#luckysheet-bottom-add-row,
+#luckysheet-bottom-add-row-input,
+span[style="font-size: 14px;color: #9c9c9c;"] {
+    display: none;
+}
+
+.ms-DetailsList-headerWrapper{
+  display: flex;
+  margin-top: -22px !important;
+}
+
+.ms-DetailsHeader {
+  display: flex !important;
+  padding: 11px 7px 0px 7px !important;
+  min-width: auto !important;
+  height: 35px !important;
+  background-color: rgb(171, 194, 220) !important;
+}
+
+.ms-DetailsList-contentWrapper{
+  margin: 0px 0px 0px -2px !important;
+}
+
+.ms-DetailsList::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px;
+}
+
+.ms-DetailsList::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 4px; 
+}
+
+.ms-DetailsList::-webkit-scrollbar-track {
+  background-color: #eee; 
+}
+
+.custom-details-list .ms-DetailsRow-cell {
+  margin: -5px -7px 9px 8px;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.cellTitle-173 {
+  outline: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0px 8px 0px 0px;
+}
+
+.endroslment-tables {
+  border: 4px solid #ccc; 
+  border-radius: 10px; 
+}
+
+.App {
+  display: flex;
+  /* margin: 0px 110px 0px 110px; */
+  padding: 0px;
+  position: absolute;
+  width: 96vw;
+  height: 94.5vh;
+  /*left: 110px;
+  top: 30px; 
+  text-align: center;*/
+}
+
+.csrSheet {
+  display: flex;
+  padding: 0px;
+  position: absolute;
+  /* margin: 15px 0px 0px 0px; */
+  width: 100vw;
+  height: 90vh;
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .csrSheet {
+    width: 100vw;
+    height: 70vh;
+  }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .csrSheet {
+    width: 100vw;
+    height: 75vh;
+  }
+}
+
+/* Large devices (laptops/desktops, 900px and up) */
+@media only screen and (min-width: 900px) {
+  .csrSheet {
+    width: 100vw;
+    height: 90vh;
+  }
+}
+
+
+.navItem.selected {
+  background-color: dimgrey;
+}
+
+.navItem {
+  padding: 10px;
+  display: flex;
+  margin: 25px 0px 0px 0px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* .luckysheet-modal-dialog {
+  display: none !important;
+}
+.luckysheet-modal-dialog-mask {
+  display: none !important;
+}  */
+
+.luckysheet-modal-dialog-title {
+  background-color: #fff;
+  color: #fffefe;
+  cursor: default;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 16px;
+  content: none;
+}
+.luckysheet-modal-dialog-title::before {
+    color: #000000;
+  content: "Invalid Data Operation"; 
+}
+.luckysheet-modal-dialog-content {
+  color: #fffefe;
+}
+
+#luckysheet-search-replace {     display: none !important; }
+
+.navItem:hover {
+  background-color: #555; 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.alert-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px #0000001a;
+  text-align: center;
+  z-index: 9999;
+}
+
+.alert {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 80vh;  
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.flexContainer-119 {
+  display: flex;
+  /* height: 100%; */
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  /* Enables Flexbox */
+  align-items: center;
+  /* Vertically aligns items */
+  justify-content: space-between;
+  /* Spaces items evenly (left/right) */
+  border: 0.5px solid black;
+  height: 30px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  padding: 30px;
+}
+.left-content {
+  display: flex;
+  align-items: center;
+}
+.logo-container {
+  margin-right: 40px;
+}
+.header-logo {
+  height: 20px;
+  width: auto;
+}
+.welcome-text {
+  font-size: 16px; 
+  font-weight: bold; 
+  color: black; 
+}
+.Button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 5px;
+}
+
+.celVQH {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.celVQH::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+.celVQH::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 4px; 
+}
+
+.celVQH::-webkit-scrollbar-track {
+  background-color: #eee; 
+}
+
+
+.table-containe {
+  position: absolute;
+  border: 2px solid lightgrey;
+  border-collapse: collapse;
+  margin: 60px 117px 70px 117px;
+  width: 88vw;
+  height: auto;
+}
+
+.profile-icon {
+  position: fixed;
+  display: flex;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-left: -50px;
+  margin-top: 7.5px;
+}
+
+.profile {
+  position: fixed;
+  display: flex;
+  background-color: beige;
+  padding: 0.8rem;
+  border-radius: 20px;
+  margin-left: -24px;
+  margin-top: 2px;
+}
+
+.flexContainer-106 {
+  display: flex;
+  height: auto;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  /* min-height: 20px; */
+}
+/* .fEnJOm{
+  display: flex;
+    align-items: stretch;
+    width: 100%;
+    background-color: red;
+    min-height: 52px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0,0,0,.12);
+    border-bottom-style: solid;
+
+} */
+
+.label-117 {
+  margin: 7px 4px;
+  color: black;
+  line-height: 18px;
+  display: inline-block;
+  font-weight: 600;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 11px;
+  white-space: normal;
+  font-family: wf_segoe-ui_semilight, "Segoe UI Light", "Segoe WP Light",
+    "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+  float: left;
+  padding-right: 8px;
+}
+
+.toggle {
+  display: flex;
+  position: fixed;
+  margin-left: 100rem;
+  margin-top: -1rem;
+}
+
+.pill-124 {
+  width: 30px;
+  height: 16px;
+}
+
+.pill-139 {
+  width: 30px;
+  height: 16px;
+}
+
+.pill-135 {
+  width: 30px;
+  height: 16px;
+}
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 7px;
+  }
+}
+
+/* Customize styling for lg screens */
+@media (min-width: 992px) {
+  .header-container {
+    padding: 7px;
+    position: relative;
+    width: 100vw;
+  }
+}
+
+/* Customize styling for md screens */
+@media (max-width: 991px) {
+  .header-container {
+    padding: 7px;
+    width: 100vw;
+  }
+}
+
+/* Customize styling for xs screens */
+@media (max-width: 600px) {
+  .header-container {
+    padding: 7px;
+  }
+}
+
+.spreed-container {
+  height: 95vh;
+  width: 96vw;
+  margin-top: 5px;
+}
+
+.x-spreadsheet-scrollbar.vertical {
+  bottom: 15px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 18px;
+}
+
+.x-spreadsheet-scrollbar.horizontal {
+  height: 20px;
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  background-color: #afbcbe;
+}
+
+.fButton {
+  display: flex;
+  gap: 1rem;
+  /* margin-left: 85em; */
+}
+
+.props {
+  color: black;
+  font-size: 15px;
+  font-family: "Montserrat, sans-serif";
+  /* position: fixed; */
+  margin-top: 9px;
+}
+
+.linkText-99 {
+  position: fixed;
+  margin: 0px 36px;
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.icon-117 {
+  position: fixed;
+  font-size: 16px;
+  margin: 0px 10px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  flex-shrink: 0;
+  color: black;
+}
+
+.icon-121 {
+  position: fixed;
+  font-size: 16px;
+  margin: 0px 10px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  flex-shrink: 0;
+  color: black;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar_container {
+    width: 100%;
+  }
+}
+
+/* buttoncss */
+.luckySheet_header_button {
+  height: 20px !important;
+  font-family: Tahoma;
+  font-size: 12px !important;
+  border-radius: 15px !important;
+  background-color: lightblue;
+  color: rgba(0, 0, 0, 0.681) !important;
+  margin-right: 2px !important;
+}
+
+.dropDown1 {
+  height: 20px !important;
+    font-family: Tahoma;
+    /* margin: 0px 0px 0px 40px; */
+    font-size: 12px !important;
+    font-weight: bold;
+    border-radius: 15px !important;
+    background-color: lightblue;
+    color: rgba(0, 0, 0, 0.681) !important;
+    /* margin-right: 2px !important; */
+}
+.dropDown1 option {
+  background-color: white;
+  color: black;
+}
+
+.label-117 {
+  margin-left: 10px;
+}
+
+.ref_button {
+  background-color: #6c62f1;
+}
+
+.refreshBtn {
+  border-radius: 15px !important;
+  background-color: lightblue;
+}
+
+.p2 {
+  /* padding: 2px !important; */
+  display: flex;
+  align-items: center;
+  gap: '5px';
+}
+
+
+.dropDown {
+    border-radius: 20px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    width: 210px;
+}
+
+.root-97 {
+  background-color: whitesmoke;
+  width: 112px;
+  position: relative;
+  height: 40px;
+}
+
+/* sidebar csss end */
+.QuoteApp {
+  display: flex;
+  /* margin: 0px 110px 0px 110px; */
+  padding: 0px;
+  position: absolute;
+  width: 96vw;
+  height: 95.8vh;
+  /*left: 110px;
+  top: 30px; 
+  text-align: center;*/
+}
+
+
+.sidebar-container {
+  /* background-color: whitesmoke; */
+  width: 150px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  transition: width 0.3s;
+  overflow: hidden;
+}
+
+.sidebar-container.collapsed {
+  width: 50px;
+}
+
+.sidebar-header {
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #34495e;
+}
+
+.sidebar-toggle-button {
+  margin: 0px 8px 0px 0px;
+  background-color: transparent;
+  color: #bdc3c7;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item.selected {
+  background-color: #34495e;
+}
+
+.sidebar-item:hover {
+  background-color: #1abc9c;
+}
+
+.sidebar-icon {
+  font-size: 16px;
+  margin-right: 16px;
+  color: #bdc3c7;
+}
+
+.sidebar-text {
+  margin: 4px 0px 4px 0px;
+  font-size: 11px;
+}
+
+.msg-text {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+

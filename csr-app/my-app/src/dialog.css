@@ -1,0 +1,72 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 999;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  /* background-color: #0056b3; */
+  background-color: #cbe2fa;
+}
+
+.dialogContainer {
+  .ms-Dialog-main {
+    max-width: 500px;
+    width: 500px;
+    height: 250px;
+  }
+
+  .ms-Dialog-content {
+    padding: 0;
+  }
+
+  .detailsListContainer {
+    margin-top: 5px;
+    padding: 0;
+    height: 160px;
+    /* Adjust height as needed */
+    overflow-x: auto;
+    /* Only horizontal scrolling */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    /* Add styling for .ms-DetailsList here */
+    .ms-DetailsList {
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+
+    /* Sticky header styling */
+    .ms-DetailsHeader {
+      position: sticky;
+      top: 0;
+      background-color: #f3f3f3;
+      z-index: 1;
+    }
+
+    /* Row styling with hover effect */
+    .ms-DetailsRow {
+      &:hover {
+        background-color: #f0f8ff;
+      }
+    }
+  }
+}
